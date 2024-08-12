@@ -14,41 +14,62 @@
         <div class="container">
             <h1>V Nihal</h1>
             <nav>
-                <ul>
+                <ul id="navLinks">
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
             </nav>
         </div>
     </header>
 
     <section id="about" class="container">
         <h2>About Me</h2>
-        <p>Hey there! I'm V Nihal, a middle schooler with a big passion for coding and technology. I love creating cool projects and learning new skills every day.</p>
+        <p>Hello! I'm V Nihal, a middle schooler who loves to code, build projects, and explore technology. I'm always excited to learn new things and work on creative ideas.</p>
         <img src="profile.jpg" alt="V Nihal" class="profile-img">
     </section>
 
     <section id="projects" class="container">
         <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project">
-                <h3>My First Website</h3>
-                <p>A simple website I created to learn HTML and CSS.</p>
-                <a href="#" class="btn">View Project</a>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h3>My First Website</h3>
+                    <p>A simple website I created to learn HTML and CSS.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="carousel-item">
+                    <h3>Calculator App</h3>
+                    <p>A basic calculator app I built using JavaScript.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <!-- Add more carousel items here -->
             </div>
-            <div class="project">
-                <h3>Calculator App</h3>
-                <p>A basic calculator app I built using JavaScript.</p>
-                <a href="#" class="btn">View Project</a>
+            <a class="carousel-control prev" onclick="prevSlide()">&#10094;</a>
+            <a class="carousel-control next" onclick="nextSlide()">&#10095;</a>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <h3>HTML & CSS</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
             </div>
-            <!-- Add more projects here -->
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+            </div>
+            <!-- Add more skills here -->
         </div>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>If you'd like to reach out, feel free to drop me an email at: <a href="mailto:vnihal201100@gmail.com">vnihal201100@gmail.com</a></p>
+        <p>Let's connect! You can email me at: <a href="mailto:vnihal201100@gmail.com">vnihal201100@gmail.com</a></p>
     </section>
 
     <footer>
