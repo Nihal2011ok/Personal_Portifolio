@@ -5,43 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V Nihal's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>V Nihal</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>V Nihal</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="container">
         <h2>About Me</h2>
-        <p>Hello! I'm V Nihal, a middle schooler passionate about coding, technology, and learning new things.</p>
+        <p>Hey there! I'm V Nihal, a middle schooler with a big passion for coding and technology. I love creating cool projects and learning new skills every day.</p>
+        <img src="profile.jpg" alt="V Nihal" class="profile-img">
     </section>
 
-    <section id="projects">
+    <section id="projects" class="container">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>My First Website</h3>
-            <p>A simple website I created to learn HTML and CSS.</p>
-        </div>
-        <div class="project">
-            <h3>Calculator App</h3>
-            <p>A basic calculator app I built using JavaScript.</p>
+        <div class="project-grid">
+            <div class="project">
+                <h3>My First Website</h3>
+                <p>A simple website I created to learn HTML and CSS.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Calculator App</h3>
+                <p>A basic calculator app I built using JavaScript.</p>
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <!-- Add more projects here -->
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>If you want to reach out, you can email me at: <a href="mailto:example@example.com">example@example.com</a></p>
+        <p>If you'd like to reach out, feel free to drop me an email at: <a href="mailto:vnihal201100@gmail.com">vnihal201100@gmail.com</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2024 V Nihal. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 V Nihal. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
