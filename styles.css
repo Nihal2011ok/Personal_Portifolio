@@ -1,9 +1,11 @@
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
+    transition: all 0.3s ease;
 }
 
 .container {
@@ -37,6 +39,11 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
 }
 
 #menu-icon {
@@ -64,17 +71,51 @@ nav ul li a {
 }
 
 section {
-    padding: 40px 0;
+    padding: 60px 0;
     margin: 20px 0;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 section h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #ff6347;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hero {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #ff6347;
+    color: #fff;
+}
+
+#hero .btn {
+    background-color: #fff;
+    color: #ff6347;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#hero .btn:hover {
+    background-color: #fff3e0;
 }
 
 #about {
@@ -139,6 +180,11 @@ section h2 {
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
 }
 
 .skill-bar {
@@ -146,12 +192,68 @@ section h2 {
     height: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    position: relative;
 }
 
 .skill-level {
     height: 10px;
     background-color: #333;
     border-radius: 5px;
+    position: relative;
+    transition: width 0.3s ease;
+}
+
+.skill-percentage {
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    font-size: 14px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form .btn {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form .btn:hover {
+    background-color: #e55337;
+}
+
+.form-feedback {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
 }
 
 footer {
@@ -161,4 +263,5 @@ footer {
     padding: 15px 0;
     margin-top: 20px;
     border-top: 1px solid #444;
+    transition: background-color 0.3s ease;
 }

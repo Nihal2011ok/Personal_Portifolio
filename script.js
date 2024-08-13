@@ -1,3 +1,4 @@
+
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('show');
@@ -27,5 +28,31 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
-
 showSlide(currentSlide);
+
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const feedback = document.querySelector('.form-feedback');
+
+    if (name === '' || email === '' || message === '') {
+        feedback.textContent = 'Please fill out all fields.';
+        feedback.style.color = 'red';
+    } else if (!validateEmail(email)) {
+        feedback.textContent = 'Please enter a valid email address.';
+        feedback.style.color = 'red';
+    } else {
+        feedback.textContent = 'Thank you for your message!';
+        feedback.style.color = 'green';
+        form.reset();
+    }
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}

@@ -25,6 +25,12 @@
         </div>
     </header>
 
+    <section id="hero" class="container">
+        <h2>Welcome to My Portfolio!</h2>
+        <p>I'm V Nihal, a passionate coder and technology enthusiast.</p>
+        <a href="#about" class="btn hero-btn">Learn More</a>
+    </section>
+
     <section id="about" class="container">
         <h2>About Me</h2>
         <p>Hello! I'm V Nihal, a middle schooler who loves to code, build projects, and explore technology. I'm always excited to learn new things and work on creative ideas.</p>
@@ -45,7 +51,6 @@
                     <p>A basic calculator app I built using JavaScript.</p>
                     <a href="#" class="btn">View Project</a>
                 </div>
-                <!-- Add more carousel items here -->
             </div>
             <a class="carousel-control prev" onclick="prevSlide()">&#10094;</a>
             <a class="carousel-control next" onclick="nextSlide()">&#10095;</a>
@@ -57,19 +62,41 @@
         <div class="skills-grid">
             <div class="skill">
                 <h3>HTML & CSS</h3>
-                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;">
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
             </div>
             <div class="skill">
                 <h3>JavaScript</h3>
-                <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;">
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                </div>
             </div>
-            <!-- Add more skills here -->
         </div>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>Let's connect! You can email me at: <a href="mailto:vnihal201100@gmail.com">vnihal201100@gmail.com</a></p>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p class="form-feedback"></p>
     </section>
 
     <footer>
