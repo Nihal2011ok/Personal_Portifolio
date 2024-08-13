@@ -1,4 +1,3 @@
-
 function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('show');
@@ -14,7 +13,7 @@ function toggleDarkMode() {
     document.querySelector('footer').classList.toggle('dark-mode');
 }
 
-// Carousel Functionality
+
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -68,3 +67,38 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+window.addEventListener('scroll', function() {
+    const backToTop = document.getElementById('back-to-top');
+    if (window.pageYOffset > 300) {
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
+document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll("img[loading='lazy']");
+    lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+    });
+});

@@ -18,6 +18,7 @@
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
@@ -38,7 +39,8 @@
     <section id="about" class="container">
         <h2>About Me</h2>
         <p>Hello! I'm V Nihal, a middle schooler who loves to code, build projects, and explore technology. I'm always excited to learn new things and work on creative ideas.</p>
-        <img src="profile.jpg" alt="V Nihal" class="profile-img">
+        <img src="profile.jpg" alt="V Nihal" class="profile-img" loading="lazy">
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
     </section>
 
     <section id="projects" class="container">
@@ -83,6 +85,23 @@
         </div>
     </section>
 
+    <section id="blog" class="container">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+            <article class="blog-post">
+                <h3>Getting Started with JavaScript</h3>
+                <p>A beginner's guide to learning JavaScript.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+            <article class="blog-post">
+                <h3>Building a Simple Calculator</h3>
+                <p>A step-by-step tutorial on building a calculator using HTML, CSS, and JavaScript.</p>
+                <a href="#" class="btn">Read More</a>
+            </article>
+            <!-- Add more blog posts here -->
+        </div>
+    </section>
+
     <section id="contact" class="container">
         <h2>Contact</h2>
         <form id="contactForm">
@@ -108,6 +127,8 @@
             <p>&copy; 2024 V Nihal. All rights reserved.</p>
         </div>
     </footer>
+
+    <a href="#hero" id="back-to-top" title="Back to Top">&uarr;</a>
 
     <script src="script.js"></script>
 </body>
