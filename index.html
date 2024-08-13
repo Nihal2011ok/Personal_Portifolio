@@ -22,6 +22,10 @@
                 </ul>
                 <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
             </nav>
+            <div id="dark-mode-toggle">
+                <input type="checkbox" id="darkModeCheckbox" onclick="toggleDarkMode()">
+                <label for="darkModeCheckbox">Dark Mode</label>
+            </div>
         </div>
     </header>
 
@@ -51,6 +55,7 @@
                     <p>A basic calculator app I built using JavaScript.</p>
                     <a href="#" class="btn">View Project</a>
                 </div>
+                <!-- Add more carousel items here -->
             </div>
             <a class="carousel-control prev" onclick="prevSlide()">&#10094;</a>
             <a class="carousel-control next" onclick="nextSlide()">&#10095;</a>
@@ -60,22 +65,21 @@
     <section id="skills" class="container">
         <h2>Skills</h2>
         <div class="skills-grid">
-            <div class="skill">
+            <div class="skill" data-skill="80">
                 <h3>HTML & CSS</h3>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 80%;">
-                        <span class="skill-percentage">80%</span>
-                    </div>
+                    <div class="skill-level"></div>
+                    <span class="skill-percentage">80%</span>
                 </div>
             </div>
-            <div class="skill">
+            <div class="skill" data-skill="70">
                 <h3>JavaScript</h3>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 70%;">
-                        <span class="skill-percentage">70%</span>
-                    </div>
+                    <div class="skill-level"></div>
+                    <span class="skill-percentage">70%</span>
                 </div>
             </div>
+            <!-- Add more skills here -->
         </div>
     </section>
 

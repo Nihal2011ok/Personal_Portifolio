@@ -5,6 +5,16 @@ function toggleMenu() {
 }
 
 
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.toggle('dark-mode');
+    });
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelector('footer').classList.toggle('dark-mode');
+}
+
+// Carousel Functionality
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -28,7 +38,9 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
+
 showSlide(currentSlide);
+
 
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', function(event) {
